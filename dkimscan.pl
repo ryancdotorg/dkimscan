@@ -91,7 +91,7 @@ sub response_handler {
 
   foreach my $rr ($response->answer) {
     next unless($rr->type eq 'TXT');
-    my $h = parse_dkim_txt($rr->txtdata);
+    my $h = parse_dkim_txt(join('', $rr->txtdata));
     next unless($h && $h->{'p'});
     print  "# fqdn: $qname\n" unless ($QUIET);
     print  "# txt:  " . $rr->rdatastr . "\n" unless ($QUIET);
