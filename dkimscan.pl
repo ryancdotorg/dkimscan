@@ -27,7 +27,7 @@ my $QUIET = $ENV{QUIET} || 0;
 # %D1,3%   : first through third parts of domain name
 # %D-1%    : last part of domain name
 # %D-3,-1% : last three parts of domain name
-# %La,b,c  : list of strings
+# %La,b,c% : list of strings
 # %Ofoo%   : optional string
 
 ### INITIALIZATION ###
